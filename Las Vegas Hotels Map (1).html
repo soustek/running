@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5bdb2dfbfbe6d57a60279b46f3d8b189 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="
+     position: fixed; 
+     bottom: 50px; left: 50px; width: 250px; height: 400px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white;
+     ">
+     &nbsp;<b>Legend</b><br>
+     &nbsp;<i class="fa fa-circle" style="color:red"></i>&nbsp;Caesars Sportsbook<br>
+     &nbsp;<i class="fa fa-circle" style="color:blue"></i>&nbsp;BetMGM<br>
+     &nbsp;<i class="fa fa-circle" style="color:green"></i>&nbsp;William Hill<br>
+     &nbsp;<i class="fa fa-circle" style="color:purple"></i>&nbsp;Bally Bet<br>
+     &nbsp;<i class="fa fa-circle" style="color:orange"></i>&nbsp;Golden Circle Sportsbook and Bar<br>
+     &nbsp;<i class="fa fa-circle" style="color:yellow"></i>&nbsp;WynnBET<br>
+     &nbsp;<i class="fa fa-circle" style="color:pink"></i>&nbsp;Boyd Gaming<br>
+     &nbsp;<i class="fa fa-circle" style="color:cyan"></i>&nbsp;Resorts World Sportsbook<br>
+     &nbsp;<i class="fa fa-circle" style="color:brown"></i>&nbsp;Station Casinos (STN Mobile)<br>
+     &nbsp;<i class="fa fa-circle" style="color:lime"></i>&nbsp;Betfred Sports<br>
+     &nbsp;<i class="fa fa-circle" style="color:magenta"></i>&nbsp;SuperBook<br>
+     &nbsp;<i class="fa fa-circle" style="color:black"></i>&nbsp;South Point Sportsbook<br>
+     </div>
+     
+    
+            <div class="folium-map" id="map_5bdb2dfbfbe6d57a60279b46f3d8b189" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5bdb2dfbfbe6d57a60279b46f3d8b189 = L.map(
+                "map_5bdb2dfbfbe6d57a60279b46f3d8b189",
+                {
+                    center: [36.1147, -115.1728],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cded98567678d8e26eeafa4212fa1e0b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+            var circle_marker_099f0ddd68fe1f44eb791fa88fd83d6f = L.circleMarker(
+                [36.1175, -115.175],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_0bb3d481742a8c32142ce7f1c3d8c886 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d1c92a2730270e11f5d2f9cf2b8154c = $(`<div id="html_2d1c92a2730270e11f5d2f9cf2b8154c" style="width: 100.0%; height: 100.0%;">Caesars Palace<br>Caesars Sportsbook</div>`)[0];
+            popup_0bb3d481742a8c32142ce7f1c3d8c886.setContent(html_2d1c92a2730270e11f5d2f9cf2b8154c);
+        
+
+        circle_marker_099f0ddd68fe1f44eb791fa88fd83d6f.bindPopup(popup_0bb3d481742a8c32142ce7f1c3d8c886)
+        ;
+
+        
+    
+    
+            var circle_marker_69269658ff3fda0f9adb19211165f630 = L.circleMarker(
+                [36.1156, -115.1711],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_57caacf5d6bd6d540f100ae0899857e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e9622ee43c1f72c31d5e02268f7f188 = $(`<div id="html_6e9622ee43c1f72c31d5e02268f7f188" style="width: 100.0%; height: 100.0%;">The Cromwell<br>Caesars Sportsbook</div>`)[0];
+            popup_57caacf5d6bd6d540f100ae0899857e3.setContent(html_6e9622ee43c1f72c31d5e02268f7f188);
+        
+
+        circle_marker_69269658ff3fda0f9adb19211165f630.bindPopup(popup_57caacf5d6bd6d540f100ae0899857e3)
+        ;
+
+        
+    
+    
+            var circle_marker_767cc21506941b811b90b00b6b8db6d6 = L.circleMarker(
+                [36.1161, -115.1706],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e5d4937300be49f3241fa994b30536c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f73eb32c139ada943ba16e3964ca9db = $(`<div id="html_8f73eb32c139ada943ba16e3964ca9db" style="width: 100.0%; height: 100.0%;">Flamingo Las Vegas<br>Caesars Sportsbook</div>`)[0];
+            popup_e5d4937300be49f3241fa994b30536c8.setContent(html_8f73eb32c139ada943ba16e3964ca9db);
+        
+
+        circle_marker_767cc21506941b811b90b00b6b8db6d6.bindPopup(popup_e5d4937300be49f3241fa994b30536c8)
+        ;
+
+        
+    
+    
+            var circle_marker_605f3b32cb133f54d8092937436e8130 = L.circleMarker(
+                [36.1182, -115.1718],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_68e94eda7906da63ee2ca2d7fd08631e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1866f7494a69110a01ef0f952a161a41 = $(`<div id="html_1866f7494a69110a01ef0f952a161a41" style="width: 100.0%; height: 100.0%;">Harrah’s Las Vegas<br>Caesars Sportsbook</div>`)[0];
+            popup_68e94eda7906da63ee2ca2d7fd08631e.setContent(html_1866f7494a69110a01ef0f952a161a41);
+        
+
+        circle_marker_605f3b32cb133f54d8092937436e8130.bindPopup(popup_68e94eda7906da63ee2ca2d7fd08631e)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d6649c7374c1ddc2fe2b66e0997895 = L.circleMarker(
+                [36.1183, -115.1707],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_08c7672486f4a1ae018fa538eef49607 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_868041b79bb4dae2873968d6491a1507 = $(`<div id="html_868041b79bb4dae2873968d6491a1507" style="width: 100.0%; height: 100.0%;">The Linq Hotel + Experience<br>Caesars Sportsbook</div>`)[0];
+            popup_08c7672486f4a1ae018fa538eef49607.setContent(html_868041b79bb4dae2873968d6491a1507);
+        
+
+        circle_marker_b9d6649c7374c1ddc2fe2b66e0997895.bindPopup(popup_08c7672486f4a1ae018fa538eef49607)
+        ;
+
+        
+    
+    
+            var circle_marker_7a37cfeb8e542c36fcd4c0c229994615 = L.circleMarker(
+                [36.1123, -115.1767],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_a59a1cfe1e1f2f0a8eb83b40aa6eaa0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_415ef96afef4ba66bd547ec63259985f = $(`<div id="html_415ef96afef4ba66bd547ec63259985f" style="width: 100.0%; height: 100.0%;">Bellagio Hotel & Casino<br>BetMGM</div>`)[0];
+            popup_a59a1cfe1e1f2f0a8eb83b40aa6eaa0e.setContent(html_415ef96afef4ba66bd547ec63259985f);
+        
+
+        circle_marker_7a37cfeb8e542c36fcd4c0c229994615.bindPopup(popup_a59a1cfe1e1f2f0a8eb83b40aa6eaa0e)
+        ;
+
+        
+    
+    
+            var circle_marker_e36068b759b070e4e017df7561b82130 = L.circleMarker(
+                [36.1147, -115.1707],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_6be32b89d7aec5942afe2748b0ee5427 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5bedce447d409bc0e088b4a8cd837ca0 = $(`<div id="html_5bedce447d409bc0e088b4a8cd837ca0" style="width: 100.0%; height: 100.0%;">Paris Las Vegas<br>Caesars Sportsbook</div>`)[0];
+            popup_6be32b89d7aec5942afe2748b0ee5427.setContent(html_5bedce447d409bc0e088b4a8cd837ca0);
+        
+
+        circle_marker_e36068b759b070e4e017df7561b82130.bindPopup(popup_6be32b89d7aec5942afe2748b0ee5427)
+        ;
+
+        
+    
+    
+            var circle_marker_f04f0bf80d4418bc1a813084d7e87a09 = L.circleMarker(
+                [36.1108, -115.1716],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_8a2dc0f5fc37d75e13626ea3ffd00b30 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0bde741fe8c85d952b50c4a8f00f387d = $(`<div id="html_0bde741fe8c85d952b50c4a8f00f387d" style="width: 100.0%; height: 100.0%;">Planet Hollywood Resort & Casino<br>Caesars Sportsbook</div>`)[0];
+            popup_8a2dc0f5fc37d75e13626ea3ffd00b30.setContent(html_0bde741fe8c85d952b50c4a8f00f387d);
+        
+
+        circle_marker_f04f0bf80d4418bc1a813084d7e87a09.bindPopup(popup_8a2dc0f5fc37d75e13626ea3ffd00b30)
+        ;
+
+        
+    
+    
+            var circle_marker_d30d4d25f935154100e42bdddf342788 = L.circleMarker(
+                [36.1138, -115.1703],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_0ae7b126cd73a65612bb39af2a81e205 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7ae51ae6ef8129091c31cd80267eb0cb = $(`<div id="html_7ae51ae6ef8129091c31cd80267eb0cb" style="width: 100.0%; height: 100.0%;">Bally’s Las Vegas Hotel & Casino (Horseshoe)<br>Bally Bet</div>`)[0];
+            popup_0ae7b126cd73a65612bb39af2a81e205.setContent(html_7ae51ae6ef8129091c31cd80267eb0cb);
+        
+
+        circle_marker_d30d4d25f935154100e42bdddf342788.bindPopup(popup_0ae7b126cd73a65612bb39af2a81e205)
+        ;
+
+        
+    
+    
+            var circle_marker_9a462b8a2f308201c1e0fbcaf3023382 = L.circleMarker(
+                [36.1093, -115.1745],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_d505ed00bfe59e48192277304ea9a4c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_85ef8f1f1e580e9db89215d1f9064676 = $(`<div id="html_85ef8f1f1e580e9db89215d1f9064676" style="width: 100.0%; height: 100.0%;">The Cosmopolitan of Las Vegas<br>BetMGM</div>`)[0];
+            popup_d505ed00bfe59e48192277304ea9a4c8.setContent(html_85ef8f1f1e580e9db89215d1f9064676);
+        
+
+        circle_marker_9a462b8a2f308201c1e0fbcaf3023382.bindPopup(popup_d505ed00bfe59e48192277304ea9a4c8)
+        ;
+
+        
+    
+    
+            var circle_marker_5d6087985416d65d9b0efbf5d444842a = L.circleMarker(
+                [36.1073, -115.1765],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_c296d54a5cf2921de681db59bad32790 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61e2040e698946521f7a5c547519125c = $(`<div id="html_61e2040e698946521f7a5c547519125c" style="width: 100.0%; height: 100.0%;">ARIA Resort & Casino<br>BetMGM</div>`)[0];
+            popup_c296d54a5cf2921de681db59bad32790.setContent(html_61e2040e698946521f7a5c547519125c);
+        
+
+        circle_marker_5d6087985416d65d9b0efbf5d444842a.bindPopup(popup_c296d54a5cf2921de681db59bad32790)
+        ;
+
+        
+    
+    
+            var circle_marker_31cb3f51b37bb77696e888f7aa1d8176 = L.circleMarker(
+                [36.1213, -115.1681],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_28465e0b04c0e902c11316b690c32e62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9ae2c41e0f58de83e44599db58d05fb2 = $(`<div id="html_9ae2c41e0f58de83e44599db58d05fb2" style="width: 100.0%; height: 100.0%;">The Venetian Resort Hotel Casino<br>William Hill</div>`)[0];
+            popup_28465e0b04c0e902c11316b690c32e62.setContent(html_9ae2c41e0f58de83e44599db58d05fb2);
+        
+
+        circle_marker_31cb3f51b37bb77696e888f7aa1d8176.bindPopup(popup_28465e0b04c0e902c11316b690c32e62)
+        ;
+
+        
+    
+    
+            var circle_marker_6f62e783c6ef5a73192f63e9bb43be31 = L.circleMarker(
+                [36.1236, -115.1711],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_1fb24e57005e2cba56b1bfb5bcf3c712 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc840e0279e70a975346fd1da358e514 = $(`<div id="html_dc840e0279e70a975346fd1da358e514" style="width: 100.0%; height: 100.0%;">Treasure Island Hotel & Casino<br>Golden Circle Sportsbook and Bar</div>`)[0];
+            popup_1fb24e57005e2cba56b1bfb5bcf3c712.setContent(html_dc840e0279e70a975346fd1da358e514);
+        
+
+        circle_marker_6f62e783c6ef5a73192f63e9bb43be31.bindPopup(popup_1fb24e57005e2cba56b1bfb5bcf3c712)
+        ;
+
+        
+    
+    
+            var circle_marker_dbbd2fa137bf507dc6c0e237a5b8f24c = L.circleMarker(
+                [36.1264, -115.1687],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_ba1c9dc4181d303658b5db15665327ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a6816b393e0a0068a8af2fba0165f2c9 = $(`<div id="html_a6816b393e0a0068a8af2fba0165f2c9" style="width: 100.0%; height: 100.0%;">Encore at Wynn Las Vegas<br>WynnBET</div>`)[0];
+            popup_ba1c9dc4181d303658b5db15665327ab.setContent(html_a6816b393e0a0068a8af2fba0165f2c9);
+        
+
+        circle_marker_dbbd2fa137bf507dc6c0e237a5b8f24c.bindPopup(popup_ba1c9dc4181d303658b5db15665327ab)
+        ;
+
+        
+    
+    
+            var circle_marker_d9a6d9b1abe9a555812d938fd44b413c = L.circleMarker(
+                [36.1273, -115.1658],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "yellow", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_1897e7006bda1497a4b61c50dd147160 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b923070dd039cb2556e3b79f2e2bc69e = $(`<div id="html_b923070dd039cb2556e3b79f2e2bc69e" style="width: 100.0%; height: 100.0%;">Wynn Las Vegas<br>WynnBET</div>`)[0];
+            popup_1897e7006bda1497a4b61c50dd147160.setContent(html_b923070dd039cb2556e3b79f2e2bc69e);
+        
+
+        circle_marker_d9a6d9b1abe9a555812d938fd44b413c.bindPopup(popup_1897e7006bda1497a4b61c50dd147160)
+        ;
+
+        
+    
+    
+            var circle_marker_f79f656673c24a28f10402ad65c5d559 = L.circleMarker(
+                [36.1091, -115.157],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_952bf37dc7ab62608ba3002236fbacde = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a56cfe5602802a4e4951c379d6e2476 = $(`<div id="html_3a56cfe5602802a4e4951c379d6e2476" style="width: 100.0%; height: 100.0%;">Ellis Island Hotel Casino & Brewery<br>William Hill</div>`)[0];
+            popup_952bf37dc7ab62608ba3002236fbacde.setContent(html_3a56cfe5602802a4e4951c379d6e2476);
+        
+
+        circle_marker_f79f656673c24a28f10402ad65c5d559.bindPopup(popup_952bf37dc7ab62608ba3002236fbacde)
+        ;
+
+        
+    
+    
+            var circle_marker_2913ac224b434ead8f6951f8e5345fcd = L.circleMarker(
+                [36.1024, -115.1697],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_3890f74b71581e426dd2ba8768f150c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fc03a51777ec6589b11266763854373 = $(`<div id="html_3fc03a51777ec6589b11266763854373" style="width: 100.0%; height: 100.0%;">MGM Grand Las Vegas<br>BetMGM</div>`)[0];
+            popup_3890f74b71581e426dd2ba8768f150c0.setContent(html_3fc03a51777ec6589b11266763854373);
+        
+
+        circle_marker_2913ac224b434ead8f6951f8e5345fcd.bindPopup(popup_3890f74b71581e426dd2ba8768f150c0)
+        ;
+
+        
+    
+    
+            var circle_marker_40516b551885e4cb05109862d053309e = L.circleMarker(
+                [36.0978, -115.1705],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e44f2ae90cd5cea056d1af49608d51ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a8b7acd017774950657cb6a50a2e28a = $(`<div id="html_0a8b7acd017774950657cb6a50a2e28a" style="width: 100.0%; height: 100.0%;">Tropicana Las Vegas<br>Bally Bet</div>`)[0];
+            popup_e44f2ae90cd5cea056d1af49608d51ae.setContent(html_0a8b7acd017774950657cb6a50a2e28a);
+        
+
+        circle_marker_40516b551885e4cb05109862d053309e.bindPopup(popup_e44f2ae90cd5cea056d1af49608d51ae)
+        ;
+
+        
+    
+    
+            var circle_marker_1d4018ea807781123177f4d254cf7367 = L.circleMarker(
+                [36.1024, -115.174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_bc1a09cdd1849013ddb7b9aeb012f258 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a67367c45dba6a1799d4106c65a405d1 = $(`<div id="html_a67367c45dba6a1799d4106c65a405d1" style="width: 100.0%; height: 100.0%;">New York-New York Hotel & Casino<br>BetMGM</div>`)[0];
+            popup_bc1a09cdd1849013ddb7b9aeb012f258.setContent(html_a67367c45dba6a1799d4106c65a405d1);
+        
+
+        circle_marker_1d4018ea807781123177f4d254cf7367.bindPopup(popup_bc1a09cdd1849013ddb7b9aeb012f258)
+        ;
+
+        
+    
+    
+            var circle_marker_0550f09e56c68e2e427901cbe00365d3 = L.circleMarker(
+                [36.099, -115.176],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_6b031a0b0cf9d9e50e37a69ce51351ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c5aef8615cf6dbd3f67919e75ecc30f0 = $(`<div id="html_c5aef8615cf6dbd3f67919e75ecc30f0" style="width: 100.0%; height: 100.0%;">Excalibur Hotel & Casino<br>BetMGM</div>`)[0];
+            popup_6b031a0b0cf9d9e50e37a69ce51351ee.setContent(html_c5aef8615cf6dbd3f67919e75ecc30f0);
+        
+
+        circle_marker_0550f09e56c68e2e427901cbe00365d3.bindPopup(popup_6b031a0b0cf9d9e50e37a69ce51351ee)
+        ;
+
+        
+    
+    
+            var circle_marker_c12f060115d95705ee4f9dbdc9ea0169 = L.circleMarker(
+                [36.0954, -115.1766],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e240e588b6b9434fdc0075e2d45e7d6d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c909dc64043701d4bbac6bc02d2379d2 = $(`<div id="html_c909dc64043701d4bbac6bc02d2379d2" style="width: 100.0%; height: 100.0%;">Luxor Hotel & Casino<br>BetMGM</div>`)[0];
+            popup_e240e588b6b9434fdc0075e2d45e7d6d.setContent(html_c909dc64043701d4bbac6bc02d2379d2);
+        
+
+        circle_marker_c12f060115d95705ee4f9dbdc9ea0169.bindPopup(popup_e240e588b6b9434fdc0075e2d45e7d6d)
+        ;
+
+        
+    
+    
+            var circle_marker_57d66e80d455e20384d238c4eb970ebb = L.circleMarker(
+                [36.1197, -115.1833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_dc9e9487ff82c0c4899ef7175b6462e0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8160d28197e574402af886e46f45f29 = $(`<div id="html_e8160d28197e574402af886e46f45f29" style="width: 100.0%; height: 100.0%;">Rio All-Suite Hotel & Casino<br>William Hill</div>`)[0];
+            popup_dc9e9487ff82c0c4899ef7175b6462e0.setContent(html_e8160d28197e574402af886e46f45f29);
+        
+
+        circle_marker_57d66e80d455e20384d238c4eb970ebb.bindPopup(popup_dc9e9487ff82c0c4899ef7175b6462e0)
+        ;
+
+        
+    
+    
+            var circle_marker_b25e61657240026be54bb36565a3b1f8 = L.circleMarker(
+                [36.1152, -115.1897],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_b1bfc0b80951223ba550e53587e7f3ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e83c3b8ca38bfe0005ae9493c246173 = $(`<div id="html_8e83c3b8ca38bfe0005ae9493c246173" style="width: 100.0%; height: 100.0%;">Gold Coast Hotel & Casino<br>Boyd Gaming</div>`)[0];
+            popup_b1bfc0b80951223ba550e53587e7f3ac.setContent(html_8e83c3b8ca38bfe0005ae9493c246173);
+        
+
+        circle_marker_b25e61657240026be54bb36565a3b1f8.bindPopup(popup_b1bfc0b80951223ba550e53587e7f3ac)
+        ;
+
+        
+    
+    
+            var circle_marker_914272bc268c4fa8e62dc6f6a47df419 = L.circleMarker(
+                [36.1332, -115.1668],
+                {"bubblingMouseEvents": true, "color": "cyan", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e60097a5824a3decd06a74253b600904 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53abf081d36abf83aa95847b06fc3929 = $(`<div id="html_53abf081d36abf83aa95847b06fc3929" style="width: 100.0%; height: 100.0%;">Resorts World Las Vegas<br>Resorts World Sportsbook</div>`)[0];
+            popup_e60097a5824a3decd06a74253b600904.setContent(html_53abf081d36abf83aa95847b06fc3929);
+        
+
+        circle_marker_914272bc268c4fa8e62dc6f6a47df419.bindPopup(popup_e60097a5824a3decd06a74253b600904)
+        ;
+
+        
+    
+    
+            var circle_marker_c82ecbff866ea17f10e70f3e6ecc2acc = L.circleMarker(
+                [36.0975, -115.1823],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_74726e9980f03fb43e73b890a1a47a7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_471bc938f429263746b7756f7f02c3dc = $(`<div id="html_471bc938f429263746b7756f7f02c3dc" style="width: 100.0%; height: 100.0%;">Wild Wild West<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_74726e9980f03fb43e73b890a1a47a7b.setContent(html_471bc938f429263746b7756f7f02c3dc);
+        
+
+        circle_marker_c82ecbff866ea17f10e70f3e6ecc2acc.bindPopup(popup_74726e9980f03fb43e73b890a1a47a7b)
+        ;
+
+        
+    
+    
+            var circle_marker_438286dcd295d891a5b990e55b29f84a = L.circleMarker(
+                [36.107, -115.197],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_8488b9e32eb5d9b3321443fa8d8da160 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5051173d3b9f980fcb1474f6b5b893d = $(`<div id="html_a5051173d3b9f980fcb1474f6b5b893d" style="width: 100.0%; height: 100.0%;">The Orleans Hotel & Casino<br>Boyd Gaming</div>`)[0];
+            popup_8488b9e32eb5d9b3321443fa8d8da160.setContent(html_a5051173d3b9f980fcb1474f6b5b893d);
+        
+
+        circle_marker_438286dcd295d891a5b990e55b29f84a.bindPopup(popup_8488b9e32eb5d9b3321443fa8d8da160)
+        ;
+
+        
+    
+    
+            var circle_marker_a6c26062d42611466f2ff04a9e449961 = L.circleMarker(
+                [36.1446, -115.1553],
+                {"bubblingMouseEvents": true, "color": "lime", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_da2d9f04d5ae5fb24a0fb2f08e8509d3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a50d37752234d85d1c43572124f3136 = $(`<div id="html_9a50d37752234d85d1c43572124f3136" style="width: 100.0%; height: 100.0%;">Virgin Hotels Las Vegas<br>Betfred Sports</div>`)[0];
+            popup_da2d9f04d5ae5fb24a0fb2f08e8509d3.setContent(html_9a50d37752234d85d1c43572124f3136);
+        
+
+        circle_marker_a6c26062d42611466f2ff04a9e449961.bindPopup(popup_da2d9f04d5ae5fb24a0fb2f08e8509d3)
+        ;
+
+        
+    
+    
+            var circle_marker_7b5b77f3f3df87769b41873535845085 = L.circleMarker(
+                [36.1498, -115.1518],
+                {"bubblingMouseEvents": true, "color": "lime", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lime", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_1502f23d9a06c76118f6af54f1a3a147 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_979cca0e8a6dc6ed2e9dfc75264feaa1 = $(`<div id="html_979cca0e8a6dc6ed2e9dfc75264feaa1" style="width: 100.0%; height: 100.0%;">Hard Rock Hotel & Casino<br>Betfred Sports</div>`)[0];
+            popup_1502f23d9a06c76118f6af54f1a3a147.setContent(html_979cca0e8a6dc6ed2e9dfc75264feaa1);
+        
+
+        circle_marker_7b5b77f3f3df87769b41873535845085.bindPopup(popup_1502f23d9a06c76118f6af54f1a3a147)
+        ;
+
+        
+    
+    
+            var circle_marker_f7ac357f75716bcf2c1a37fa574191fc = L.circleMarker(
+                [36.1178, -115.1537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_31f96af6b61807e8b4a2afd54727fc87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a152161cd1c0fc7bdbb9fd71ebb7873f = $(`<div id="html_a152161cd1c0fc7bdbb9fd71ebb7873f" style="width: 100.0%; height: 100.0%;">Silver Sevens Hotel & Casino<br>William Hill</div>`)[0];
+            popup_31f96af6b61807e8b4a2afd54727fc87.setContent(html_a152161cd1c0fc7bdbb9fd71ebb7873f);
+        
+
+        circle_marker_f7ac357f75716bcf2c1a37fa574191fc.bindPopup(popup_31f96af6b61807e8b4a2afd54727fc87)
+        ;
+
+        
+    
+    
+            var circle_marker_ab4b757e197fdde026564898cf2ed6ed = L.circleMarker(
+                [36.1516, -115.1533],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e94065145e10d378c358f4805001c08a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e19a6da2334698ecee25af33379ffe1 = $(`<div id="html_3e19a6da2334698ecee25af33379ffe1" style="width: 100.0%; height: 100.0%;">Palace Stations<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_e94065145e10d378c358f4805001c08a.setContent(html_3e19a6da2334698ecee25af33379ffe1);
+        
+
+        circle_marker_ab4b757e197fdde026564898cf2ed6ed.bindPopup(popup_e94065145e10d378c358f4805001c08a)
+        ;
+
+        
+    
+    
+            var circle_marker_e6437e237be82500da32d9d3ed1e2912 = L.circleMarker(
+                [36.1452, -115.1578],
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_c83995c3f8841957defc50b91b7a36ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a640d8f21bd392b78a872728db663cf = $(`<div id="html_9a640d8f21bd392b78a872728db663cf" style="width: 100.0%; height: 100.0%;">Westgate Las Vegas Resort & Casino<br>SuperBook</div>`)[0];
+            popup_c83995c3f8841957defc50b91b7a36ea.setContent(html_9a640d8f21bd392b78a872728db663cf);
+        
+
+        circle_marker_e6437e237be82500da32d9d3ed1e2912.bindPopup(popup_c83995c3f8841957defc50b91b7a36ea)
+        ;
+
+        
+    
+    
+            var circle_marker_d4af10bb76a1784465cdfdf019a3f36e = L.circleMarker(
+                [36.1366, -115.1646],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_c4aa12a68630911450029302d7399e29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c94c6a82543eab5108868e77997c4b3 = $(`<div id="html_2c94c6a82543eab5108868e77997c4b3" style="width: 100.0%; height: 100.0%;">Circus Circus Hotel & Casino<br>Caesars Sportsbook</div>`)[0];
+            popup_c4aa12a68630911450029302d7399e29.setContent(html_2c94c6a82543eab5108868e77997c4b3);
+        
+
+        circle_marker_d4af10bb76a1784465cdfdf019a3f36e.bindPopup(popup_c4aa12a68630911450029302d7399e29)
+        ;
+
+        
+    
+    
+            var circle_marker_7f99184b61319bb69fbae6dbdedbf56d = L.circleMarker(
+                [36.147, -115.1553],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_3f2012b590a45c3dfe83e2cae2b0abc6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e929932298009f90f695711f037ecc9f = $(`<div id="html_e929932298009f90f695711f037ecc9f" style="width: 100.0%; height: 100.0%;">The STRAT Hotel, Casino & SkyPod<br>William Hill</div>`)[0];
+            popup_3f2012b590a45c3dfe83e2cae2b0abc6.setContent(html_e929932298009f90f695711f037ecc9f);
+        
+
+        circle_marker_7f99184b61319bb69fbae6dbdedbf56d.bindPopup(popup_3f2012b590a45c3dfe83e2cae2b0abc6)
+        ;
+
+        
+    
+    
+            var circle_marker_8d44fd692b04d42cee7bd194608562c1 = L.circleMarker(
+                [36.1424, -115.1555],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_232dfb62cd7c7a64e487ab65a34a7d50 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74be8b676bdd8decbabce417af92ef8e = $(`<div id="html_74be8b676bdd8decbabce417af92ef8e" style="width: 100.0%; height: 100.0%;">Sahara Las Vegas<br>William Hill</div>`)[0];
+            popup_232dfb62cd7c7a64e487ab65a34a7d50.setContent(html_74be8b676bdd8decbabce417af92ef8e);
+        
+
+        circle_marker_8d44fd692b04d42cee7bd194608562c1.bindPopup(popup_232dfb62cd7c7a64e487ab65a34a7d50)
+        ;
+
+        
+    
+    
+            var circle_marker_c5d2cd023ad813e932088aaf3a41215d = L.circleMarker(
+                [36.1289, -115.198],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_1aa5cb839a0227b7712af468381a7ac9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa13db6f038470a355a7a02a05a6142d = $(`<div id="html_aa13db6f038470a355a7a02a05a6142d" style="width: 100.0%; height: 100.0%;">Palms Casino Resort<br>William Hill</div>`)[0];
+            popup_1aa5cb839a0227b7712af468381a7ac9.setContent(html_aa13db6f038470a355a7a02a05a6142d);
+        
+
+        circle_marker_c5d2cd023ad813e932088aaf3a41215d.bindPopup(popup_1aa5cb839a0227b7712af468381a7ac9)
+        ;
+
+        
+    
+    
+            var circle_marker_658d231a22f38f6483c34a34b20fd8d8 = L.circleMarker(
+                [36.1584, -115.135],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_ef5a4e64519d8420147c2052828e84ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_88dae5ac2f5c2174d11824aea46af710 = $(`<div id="html_88dae5ac2f5c2174d11824aea46af710" style="width: 100.0%; height: 100.0%;">El Cortez<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_ef5a4e64519d8420147c2052828e84ab.setContent(html_88dae5ac2f5c2174d11824aea46af710);
+        
+
+        circle_marker_658d231a22f38f6483c34a34b20fd8d8.bindPopup(popup_ef5a4e64519d8420147c2052828e84ab)
+        ;
+
+        
+    
+    
+            var circle_marker_8b8d0e04acbe584b1e643079827adf1f = L.circleMarker(
+                [36.0419, -115.1925],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_8c14b94c859ae52e0972db9a526cc430 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_26ab27f64e8307cea027b14e384036ab = $(`<div id="html_26ab27f64e8307cea027b14e384036ab" style="width: 100.0%; height: 100.0%;">Boulder Station<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_8c14b94c859ae52e0972db9a526cc430.setContent(html_26ab27f64e8307cea027b14e384036ab);
+        
+
+        circle_marker_8b8d0e04acbe584b1e643079827adf1f.bindPopup(popup_8c14b94c859ae52e0972db9a526cc430)
+        ;
+
+        
+    
+    
+            var circle_marker_90829845e6a99ea3da7a2287294bfddb = L.circleMarker(
+                [36.2066, -115.0945],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_2c1bb1b3f7982a1fa06f95f48df66237 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4931029354db7846d87f088e61d94a29 = $(`<div id="html_4931029354db7846d87f088e61d94a29" style="width: 100.0%; height: 100.0%;">Silverton Casino Hotel<br>William Hill</div>`)[0];
+            popup_2c1bb1b3f7982a1fa06f95f48df66237.setContent(html_4931029354db7846d87f088e61d94a29);
+        
+
+        circle_marker_90829845e6a99ea3da7a2287294bfddb.bindPopup(popup_2c1bb1b3f7982a1fa06f95f48df66237)
+        ;
+
+        
+    
+    
+            var circle_marker_47b7004a2156034871902bf98ed72ffe = L.circleMarker(
+                [36.1496, -115.1375],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_34d169626269c0f2e284f7742bca4fc0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61f9c15b4a20b7748664620049664270 = $(`<div id="html_61f9c15b4a20b7748664620049664270" style="width: 100.0%; height: 100.0%;">Cannery Casino & Hotel<br>Boyd Gaming</div>`)[0];
+            popup_34d169626269c0f2e284f7742bca4fc0.setContent(html_61f9c15b4a20b7748664620049664270);
+        
+
+        circle_marker_47b7004a2156034871902bf98ed72ffe.bindPopup(popup_34d169626269c0f2e284f7742bca4fc0)
+        ;
+
+        
+    
+    
+            var circle_marker_0b755eb31f18b674a4e4ec5914d78b7e = L.circleMarker(
+                [36.1363, -115.0994],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_403c73a41811dc26cb92e564bf12f25e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59447036672595823f169ec6bdbf8ff7 = $(`<div id="html_59447036672595823f169ec6bdbf8ff7" style="width: 100.0%; height: 100.0%;">Arizona Charlie’s Boulder<br>William Hill</div>`)[0];
+            popup_403c73a41811dc26cb92e564bf12f25e.setContent(html_59447036672595823f169ec6bdbf8ff7);
+        
+
+        circle_marker_0b755eb31f18b674a4e4ec5914d78b7e.bindPopup(popup_403c73a41811dc26cb92e564bf12f25e)
+        ;
+
+        
+    
+    
+            var circle_marker_f856a32e6d71f2adedab2436ff9b5e4a = L.circleMarker(
+                [36.1355, -115.0936],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e53c4fa45d1bdfdb216f3163e25def75 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_36a70b8d24d550a4e89b8372c622e7fe = $(`<div id="html_36a70b8d24d550a4e89b8372c622e7fe" style="width: 100.0%; height: 100.0%;">Longhorn Casino & Hotel<br>William Hill</div>`)[0];
+            popup_e53c4fa45d1bdfdb216f3163e25def75.setContent(html_36a70b8d24d550a4e89b8372c622e7fe);
+        
+
+        circle_marker_f856a32e6d71f2adedab2436ff9b5e4a.bindPopup(popup_e53c4fa45d1bdfdb216f3163e25def75)
+        ;
+
+        
+    
+    
+            var circle_marker_6d14f53ab7304c42ced4e1456fe7f1cd = L.circleMarker(
+                [36.1096, -115.0611],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_d2731a4469ca197184421bd224b3fbd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c948439a02293cbcd81972d29a1bb41b = $(`<div id="html_c948439a02293cbcd81972d29a1bb41b" style="width: 100.0%; height: 100.0%;">Sam’s Town Hotel and Gambling Hall<br>Boyd Gaming</div>`)[0];
+            popup_d2731a4469ca197184421bd224b3fbd8.setContent(html_c948439a02293cbcd81972d29a1bb41b);
+        
+
+        circle_marker_6d14f53ab7304c42ced4e1456fe7f1cd.bindPopup(popup_d2731a4469ca197184421bd224b3fbd8)
+        ;
+
+        
+    
+    
+            var circle_marker_cc94746e43cf3f42c2bb79b47788a25e = L.circleMarker(
+                [36.0719, -115.1775],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e702bd1da1da7145260c80b90b88a606 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c321ee0493bdc310a0cb7b538ad3aef6 = $(`<div id="html_c321ee0493bdc310a0cb7b538ad3aef6" style="width: 100.0%; height: 100.0%;">South Point Hotel Casino & Spa<br>South Point Sportsbook</div>`)[0];
+            popup_e702bd1da1da7145260c80b90b88a606.setContent(html_c321ee0493bdc310a0cb7b538ad3aef6);
+        
+
+        circle_marker_cc94746e43cf3f42c2bb79b47788a25e.bindPopup(popup_e702bd1da1da7145260c80b90b88a606)
+        ;
+
+        
+    
+    
+            var circle_marker_10d12dff35dac9a95f9852cbc4c95a5e = L.circleMarker(
+                [36.2056, -115.1945],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_bf1f4ae5570a4f6770ce079cc7d22c1c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4781eaff20c6f9367902966adefe98b6 = $(`<div id="html_4781eaff20c6f9367902966adefe98b6" style="width: 100.0%; height: 100.0%;">Fiesta Rancho<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_bf1f4ae5570a4f6770ce079cc7d22c1c.setContent(html_4781eaff20c6f9367902966adefe98b6);
+        
+
+        circle_marker_10d12dff35dac9a95f9852cbc4c95a5e.bindPopup(popup_bf1f4ae5570a4f6770ce079cc7d22c1c)
+        ;
+
+        
+    
+    
+            var circle_marker_1fe0d504db51d4c7f83cf3fa64ba384b = L.circleMarker(
+                [36.2077, -115.1944],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_466e6946c0bd43b89ed054f3cb5161f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e29dca9dc1821fc53a7ab09ec588cefc = $(`<div id="html_e29dca9dc1821fc53a7ab09ec588cefc" style="width: 100.0%; height: 100.0%;">Texas Station Gambling Hall & Hotel<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_466e6946c0bd43b89ed054f3cb5161f7.setContent(html_e29dca9dc1821fc53a7ab09ec588cefc);
+        
+
+        circle_marker_1fe0d504db51d4c7f83cf3fa64ba384b.bindPopup(popup_466e6946c0bd43b89ed054f3cb5161f7)
+        ;
+
+        
+    
+    
+            var circle_marker_212233bdfcf6546ce135d0c34b696871 = L.circleMarker(
+                [36.1131, -115.0819],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_b1d9bd1d2b83115780d54f3249d75190 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_74d09df46071c5894ee1b74e4522c61c = $(`<div id="html_74d09df46071c5894ee1b74e4522c61c" style="width: 100.0%; height: 100.0%;">Eastside Cannery<br>Boyd Gaming</div>`)[0];
+            popup_b1d9bd1d2b83115780d54f3249d75190.setContent(html_74d09df46071c5894ee1b74e4522c61c);
+        
+
+        circle_marker_212233bdfcf6546ce135d0c34b696871.bindPopup(popup_b1d9bd1d2b83115780d54f3249d75190)
+        ;
+
+        
+    
+    
+            var circle_marker_8b4b9c2d238970ba2fdc7bd7afe629cf = L.circleMarker(
+                [35.9906, -115.1682],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_1818c1b97ea22a3b87fd0c1dfcf31b95 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0e0c10de738443e1302b93278e73919 = $(`<div id="html_b0e0c10de738443e1302b93278e73919" style="width: 100.0%; height: 100.0%;">M Resort Spa Casino<br>BetMGM</div>`)[0];
+            popup_1818c1b97ea22a3b87fd0c1dfcf31b95.setContent(html_b0e0c10de738443e1302b93278e73919);
+        
+
+        circle_marker_8b4b9c2d238970ba2fdc7bd7afe629cf.bindPopup(popup_1818c1b97ea22a3b87fd0c1dfcf31b95)
+        ;
+
+        
+    
+    
+            var circle_marker_242ed9d1c4346d4df861694a4ca13568 = L.circleMarker(
+                [36.0789, -115.0745],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_905f10a4eb8d2334ed1dd0dba63e8637 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f8b92a66de2db932e1b0486f1b661246 = $(`<div id="html_f8b92a66de2db932e1b0486f1b661246" style="width: 100.0%; height: 100.0%;">Barley’s Casino<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_905f10a4eb8d2334ed1dd0dba63e8637.setContent(html_f8b92a66de2db932e1b0486f1b661246);
+        
+
+        circle_marker_242ed9d1c4346d4df861694a4ca13568.bindPopup(popup_905f10a4eb8d2334ed1dd0dba63e8637)
+        ;
+
+        
+    
+    
+            var circle_marker_61e22948f77c8f17372bc9ce6ea5a41f = L.circleMarker(
+                [36.1082, -115.0803],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_e12dc90c1c06d6d997c56ceccbb56597 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_768aa9cd79d1a644f3549af3caa7dcd2 = $(`<div id="html_768aa9cd79d1a644f3549af3caa7dcd2" style="width: 100.0%; height: 100.0%;">Green Valley Ranch Resort<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_e12dc90c1c06d6d997c56ceccbb56597.setContent(html_768aa9cd79d1a644f3549af3caa7dcd2);
+        
+
+        circle_marker_61e22948f77c8f17372bc9ce6ea5a41f.bindPopup(popup_e12dc90c1c06d6d997c56ceccbb56597)
+        ;
+
+        
+    
+    
+            var circle_marker_461737f29e533aa2dfb741d6cccd4a1f = L.circleMarker(
+                [36.221, -115.2402],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_60a18f4d42be598bb8d515e4d4cc37e3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fa86ec7c715de2fc744f170f3aca6e74 = $(`<div id="html_fa86ec7c715de2fc744f170f3aca6e74" style="width: 100.0%; height: 100.0%;">Suncoast Hotel and Casino<br>Boyd Gaming</div>`)[0];
+            popup_60a18f4d42be598bb8d515e4d4cc37e3.setContent(html_fa86ec7c715de2fc744f170f3aca6e74);
+        
+
+        circle_marker_461737f29e533aa2dfb741d6cccd4a1f.bindPopup(popup_60a18f4d42be598bb8d515e4d4cc37e3)
+        ;
+
+        
+    
+    
+            var circle_marker_48984115fd896a02b0f03bf9686c6353 = L.circleMarker(
+                [36.2586, -115.1909],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_262d0dac4adba706690303e127b0713b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_807082db7817a9ba99557c7bd0f105dc = $(`<div id="html_807082db7817a9ba99557c7bd0f105dc" style="width: 100.0%; height: 100.0%;">Aliante Casino + Hotel + Spa<br>Boyd Gaming</div>`)[0];
+            popup_262d0dac4adba706690303e127b0713b.setContent(html_807082db7817a9ba99557c7bd0f105dc);
+        
+
+        circle_marker_48984115fd896a02b0f03bf9686c6353.bindPopup(popup_262d0dac4adba706690303e127b0713b)
+        ;
+
+        
+    
+    
+            var circle_marker_646f0d4cf69ce0a97c4f90f4ccfbac59 = L.circleMarker(
+                [36.1083, -115.0353],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_19b2c89fd732bd0b6cc21371f36d2ec6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_004f4608486b267a0810944613596b66 = $(`<div id="html_004f4608486b267a0810944613596b66" style="width: 100.0%; height: 100.0%;">Jokers Wild Casino<br>Boyd Gaming</div>`)[0];
+            popup_19b2c89fd732bd0b6cc21371f36d2ec6.setContent(html_004f4608486b267a0810944613596b66);
+        
+
+        circle_marker_646f0d4cf69ce0a97c4f90f4ccfbac59.bindPopup(popup_19b2c89fd732bd0b6cc21371f36d2ec6)
+        ;
+
+        
+    
+    
+            var circle_marker_32ed517cb6cbc45b42338a46043cca5f = L.circleMarker(
+                [36.0291, -115.0483],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_fd1417f758bf6a0a2dc194c46a7bd959 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7279dcfc9dc167ddc93e07fc79c1f010 = $(`<div id="html_7279dcfc9dc167ddc93e07fc79c1f010" style="width: 100.0%; height: 100.0%;">Fiesta Henderson<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_fd1417f758bf6a0a2dc194c46a7bd959.setContent(html_7279dcfc9dc167ddc93e07fc79c1f010);
+        
+
+        circle_marker_32ed517cb6cbc45b42338a46043cca5f.bindPopup(popup_fd1417f758bf6a0a2dc194c46a7bd959)
+        ;
+
+        
+    
+    
+            var circle_marker_e19f77d780fe044a05b87846e996cc29 = L.circleMarker(
+                [36.2333, -115.2362],
+                {"bubblingMouseEvents": true, "color": "brown", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "brown", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_660c0f1f886e537357a2f1fd0e02509b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_30f51c0f1fdf2695a005f9aacbe66721 = $(`<div id="html_30f51c0f1fdf2695a005f9aacbe66721" style="width: 100.0%; height: 100.0%;">Santa Fe Station Hotel & Casino<br>Station Casinos (STN Mobile)</div>`)[0];
+            popup_660c0f1f886e537357a2f1fd0e02509b.setContent(html_30f51c0f1fdf2695a005f9aacbe66721);
+        
+
+        circle_marker_e19f77d780fe044a05b87846e996cc29.bindPopup(popup_660c0f1f886e537357a2f1fd0e02509b)
+        ;
+
+        
+    
+    
+            var circle_marker_6e1c33595503b811fe0138e4e2cfb86c = L.circleMarker(
+                [35.9901, -114.9141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_5bdb2dfbfbe6d57a60279b46f3d8b189);
+        
+    
+        var popup_c3e05c24edafe9e01620c0de23781aa9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_023ae5789502c3b629f934f51bc0f501 = $(`<div id="html_023ae5789502c3b629f934f51bc0f501" style="width: 100.0%; height: 100.0%;">Railroad Pass Hotel & Casino<br>William Hill</div>`)[0];
+            popup_c3e05c24edafe9e01620c0de23781aa9.setContent(html_023ae5789502c3b629f934f51bc0f501);
+        
+
+        circle_marker_6e1c33595503b811fe0138e4e2cfb86c.bindPopup(popup_c3e05c24edafe9e01620c0de23781aa9)
+        ;
+
+        
+    
+</script>
+</html>
